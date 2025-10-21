@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Torrent Selector</title>
+    <title>Sithumini Web</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
@@ -19,19 +19,24 @@
         }
 
         .dark {
-            background-color: hsl(224 71% 4%);
-            color: hsl(213 31% 91%);
+            background-color: hsl(224, 71%, 4%);
+            color: hsl(213, 31%, 91%);
         }
 
         .light {
-            background-color: hsl(0 0% 100%);
-            color: hsl(224 71% 4%);
+            background-color: hsl(0, 0%, 100%);
+            color: hsl(224, 71%, 4%);
         }
 
         .card {
-            background-color: hsl(224 71% 4%);
+            background-color: hsl(224, 71%, 8%);
             border-radius: 0.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s; /* Added transition for hover effects */
+        }
+
+        .card:hover {
+            transform: translateY(-2px); /* Added lift effect on hover */
         }
 
         .dark .card {
@@ -58,7 +63,7 @@
         }
 
         .btn-primary {
-            background-color: hsl(217.2 91.2% 59.8%);
+            background-color: hsl(117, 56%, 38%);
             color: hsl(0 0% 100%);
         }
 
@@ -105,7 +110,7 @@
         }
 
         input:checked+.slider {
-            background-color: hsl(217.2 91.2% 59.8%);
+            background-color: hwb(140 31% 17%);
         }
 
         input:checked+.slider:before {
@@ -181,7 +186,7 @@
         .edit-name-input {
             background-color: transparent;
             border: none;
-            border-bottom: 1px solid hsl(217.2 91.2% 59.8%);
+            border-bottom: 1px solid hsl(137, 91%, 60%);
             color: inherit;
             font-size: inherit;
             padding: 2px 4px;
@@ -191,7 +196,7 @@
 
         .edit-name-input:focus {
             outline: none;
-            border-bottom: 2px solid hsl(217.2 91.2% 59.8%);
+            border-bottom: 2px solid hsl(141, 68%, 40%);
         }
 
         .pin-entry {
@@ -238,13 +243,13 @@
         }
 
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #35b24a 0%, #a24b4b 100%);
             padding: 2rem 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         footer {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #35b24a 0%, #a24b4b 100%);
             padding: 2rem 0;
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
             margin-top: auto;
@@ -354,8 +359,7 @@
     <header>
         <div class="container mx-auto px-4">
             <div class="flex flex-col sm:flex-row justify-between items-center">
-                <h1 class="text-3xl font-bold text-white mb-4 sm:mb-0">🗂 Torrent
-                    File Selector</h1>
+                <h1 class="text-3xl font-bold text-white mb-4 sm:mb-0" style="font-family: 'Permanent Marker', cursive;">SITHUMINI</h1>
                 <div class="flex items-center space-x-4">
                     <div class="flex items-center">
                         <span id="themeIcon" class="mr-2 text-white">🌙</span>
@@ -405,16 +409,14 @@
     <footer>
         <div class="container mx-auto px-4">
             <div class="footer-content flex flex-col sm:flex-row justify-between items-center">
-                <p class="text-white mb-4 sm:mb-0">&copy; 2024 Torrent File Selector.
+                <p class="text-white mb-4 sm:mb-0">&copy; 2025 Sithumini & rycane.
                     All rights reserved.</p>
                 <div class="footer-buttons flex space-x-4">
-                    <a href="https://github.com/anasty17/mirror-leech-telegram-bot" target="_blank"
+                    <a href="https://github.com/rycane" target="_blank"
                         class="social-button">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.instagram.com" target="_blank" class="social-button">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+
                 </div>
             </div>
         </div>
