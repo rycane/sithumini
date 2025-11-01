@@ -35,28 +35,33 @@ async def bot_stats(_, message):
     swap = swap_memory()
     memory = virtual_memory()
     stats = f"""
-<b>Commit Date:</b> {commands["commit"]}
 
-<b>Bot Uptime:</b> {get_readable_time(time() - bot_start_time)}
-<b>OS Uptime:</b> {get_readable_time(time() - boot_time())}
+<b>Sithumini Info</b>
 
-<b>Total Disk Space:</b> {get_readable_file_size(total)}
-<b>Used:</b> {get_readable_file_size(used)} | <b>Free:</b> {get_readable_file_size(free)}
+<b>• Commit Date:</b> {commands["commit"]}
 
-<b>Upload:</b> {get_readable_file_size(net_io_counters().bytes_sent)}
-<b>Download:</b> {get_readable_file_size(net_io_counters().bytes_recv)}
+<b>• Bot Uptime:</b> {get_readable_time(time() - bot_start_time)}
+<b>• OS Uptime:</b> {get_readable_time(time() - boot_time())}
 
-<b>CPU:</b> {cpu_percent(interval=0.5)}%
-<b>RAM:</b> {memory.percent}%
-<b>DISK:</b> {disk}%
+<b>• Total Disk Space:</b> {get_readable_file_size(total)}
+<b>• Used:</b> {get_readable_file_size(used)} | <b>Free:</b> {get_readable_file_size(free)}
 
-<b>Physical Cores:</b> {cpu_count(logical=False)}
-<b>Total Cores:</b> {cpu_count()}
-<b>SWAP:</b> {get_readable_file_size(swap.total)} | <b>Used:</b> {swap.percent}%
+<b>• Upload:</b> {get_readable_file_size(net_io_counters().bytes_sent)}
+<b>• Download:</b> {get_readable_file_size(net_io_counters().bytes_recv)}
 
-<b>Memory Total:</b> {get_readable_file_size(memory.total)}
-<b>Memory Free:</b> {get_readable_file_size(memory.available)}
-<b>Memory Used:</b> {get_readable_file_size(memory.used)}
+<b>• CPU:</b> {cpu_percent(interval=0.5)}%
+<b>• RAM:</b> {memory.percent}%
+<b>• DISK:</b> {disk}%
+
+<b>• Physical Cores:</b> {cpu_count(logical=False)}
+<b>• Total Cores:</b> {cpu_count()}
+<b>• SWAP:</b> {get_readable_file_size(swap.total)} | <b>Used:</b> {swap.percent}%
+
+<b>• Memory Total:</b> {get_readable_file_size(memory.total)}
+<b>• Memory Free:</b> {get_readable_file_size(memory.available)}
+<b>• Memory Used:</b> {get_readable_file_size(memory.used)}
+
+<b>• Build Info</b>
 
 <b>python:</b> {commands["python"]}
 <b>aria2:</b> {commands["aria2"]}
